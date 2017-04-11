@@ -245,6 +245,7 @@ a {
     width: 300px;
     height: 230px;
     transform-style: preserve-3d;
+    -webkit-transform: preserve-3d;
     animation: spin 26s infinite linear;
 }
 
@@ -256,41 +257,51 @@ a {
 
 @-webkit-@keyframes spin {
     0%, 15% { -webkit-transform: rotateY(0); }
-    25%, 40% { -webkit-transform: rotateY(-90deg); }
-    45%, 60% { -webkit-transform: rotateY(-180deg); }
-    65%, 80% { -webkit-transform: rotateY(-270deg); }
-    85%, 100% { -webkit-transform: rotateY(-360deg); }
+    20%, 40% { -webkit-transform: rotateY(-90deg); }
+    45%, 65% { -webkit-transform: rotateY(-180deg); }
+    70%, 90% { -webkit-transform: rotateY(-270deg); }
+    95%, 100% { -webkit-transform: rotateY(-360deg); }
 }
 
 @keyframes spin {
     0%, 15% { transform: rotateY(0); }
-    20%, 35% { transform: rotateY(-90deg); }
-    40%, 55% { transform: rotateY(-180deg); }
-    60%, 75% { transform: rotateY(-270deg); }
-    80%, 100% { transform: rotateY(-360deg); }
+    20%, 40% { transform: rotateY(-90deg); }
+    45%, 65% { transform: rotateY(-180deg); }
+    70%, 90% { transform: rotateY(-270deg); }
+    95%, 100% { transform: rotateY(-360deg); }
 }
 
 .back {
     transform: translateZ(-150px) rotateY(180deg);
+    -webkit-transform: translateZ(-150px) rotateY(180deg);
 }
 .right {
     transform: rotateY(-270deg) translateX(150px);
+    -webkit-transform: rotateY(-270deg) translateX(150px);
     transform-origin: top right;
+    -webkit-transform-origin: top right;
 }
 .left {
     transform: rotateY(270deg) translateX(-150px);
+    -webkit-transform: rotateY(270deg) translateX(-150px);
     transform-origin: center left;
+    -webkit-transform-origin: center left;
 }
 .top {
     transform: rotateX(-90deg) translateY(-150px);
+    -webkit-transform: rotateX(-90deg) translateY(-150px);
     transform-origin: top center;
+    -webkit-transform-origin: top center;
 }
 .bottom {
     transform: rotateX(90deg) translateY(150px);
+    -webkit-transform: rotateX(90deg) translateY(150px);
     transform-origin: bottom center;
+    -webkit-transform-origin: bottom center;
 }
 .front {
     transform: translateZ(150px);
+    -webkit-transform: translateZ(150px);
 }
 
 
